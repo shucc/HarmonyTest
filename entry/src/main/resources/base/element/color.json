@@ -1,0 +1,28 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "default_db_gold",
+      "value": "#FFFF6C34"
+    },
+    {
+      "name": "default_black",
+      "value": "#1C2A44"
+    },
+    {
+      "name": "default_black_trans50",
+      "value": "#7F1C2A44"
+    },
+    {
+      "name": "default_black_trans70",
+      "value": "#b21C2A44"
+    },
+    {
+      "name": "default_guide_line",
+      "value": "#1a1C2A44"
+    }
+  ]
+}
