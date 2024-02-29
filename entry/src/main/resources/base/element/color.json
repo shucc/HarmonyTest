@@ -23,6 +23,18 @@
     {
       "name": "default_guide_line",
       "value": "#1a1C2A44"
+    },
+    {
+      "name": "default_up",
+      "value": "#FFF63845"
+    },
+    {
+      "name": "default_down",
+      "value": "#FF01AB5D"
+    },
+    {
+      "name": "default_plate",
+      "value": "#FF1C2A44"
     }
   ]
 }

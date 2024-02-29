@@ -10,13 +10,16 @@ struct SplashPage {
     this.startCount()
   }
 
+  aboutToDisappear() {
+    clearInterval(this.intervalID)
+  }
+
   /**
    * 倒计时跳转
    */
   startCount() {
     this.intervalID = setInterval(function(){
-      if (this.skipNumber <= 0) {
-        clearInterval(this.intervalID)
+      if (this.skipNumber == 0) {
         router.replaceUrl({ url: 'pages/Index' })
       } else {
         this.skipNumber--
@@ -52,7 +55,6 @@ struct SplashPage {
         .margin({ top: '20vp', right: '20dp' })
         .padding({ left: '8vp', right: '8vp', top: '5vp', bottom: '5vp' })
         .onClick(() => {
-          clearInterval(this.intervalID)
           router.replaceUrl({ url: 'pages/Index' })
         })
         .id('row_skip')

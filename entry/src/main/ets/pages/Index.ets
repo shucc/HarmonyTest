@@ -9,7 +9,7 @@ import { TradePage } from './trade/TradePage'
 @Entry
 @Component
 struct Index {
-  @State selectedIndex: number = 0
+  @State selectedIndex: number = 1
 
   build() {
     Stack({ alignContent: Alignment.BottomEnd }) {
@@ -71,7 +71,6 @@ struct Index {
       .barWidth(Constant.FULL_WIDTH_PERCENT)
       .scrollable(false)
       .barHeight('48vp')
-      .scrollable(false)
       .onChange((index: number) => {
         this.selectedIndex = index;
       })

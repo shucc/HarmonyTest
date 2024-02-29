@@ -1,10 +1,13 @@
+import webview from '@ohos.web.webview';
+import { Constant } from '../../utils/Constant';
+
 @Component
 export struct HomePage {
+  webViewController: webview.WebviewController = new webview.WebviewController
+
   build() {
-    Text('首页')
-      .width('100%')
-      .height('100%')
-      .fontSize('48fp')
-      .textAlign(TextAlign.Center)
+    Web({ src: 'https://www.baidu.com', controller: this.webViewController })
+      .width(Constant.FULL_WIDTH_PERCENT)
+      .height(Constant.FULL_HEIGHT_PERCENT)
   }
 }
