@@ -68,7 +68,7 @@ struct Index {
         }, 4))
       }
       .barMode(BarMode.Fixed)
-      .barWidth(Constant.FULL_WIDTH_PERCENT)
+      .barWidth(Constant.FULL_PERCENT)
       .scrollable(false)
       .barHeight('48vp')
       .onChange((index: number) => {
@@ -76,13 +76,13 @@ struct Index {
       })
 
       Line()
-        .width(Constant.FULL_WIDTH_PERCENT)
+        .width(Constant.FULL_PERCENT)
         .height('0.5vp')
         .backgroundColor($r('app.color.default_guide_line'))
         .margin({ bottom: '47vp' })
     }
-    .width(Constant.FULL_WIDTH_PERCENT)
-    .height(Constant.FULL_HEIGHT_PERCENT)
+    .width(Constant.FULL_PERCENT)
+    .height(Constant.FULL_PERCENT)
   }
 
   @Builder TabBottom(item: TabItem, index: number) {
@@ -91,13 +91,13 @@ struct Index {
         .width('20vp')
         .height('20vp')
       Text(item.title)
-        .width(Constant.FULL_WIDTH_PERCENT)
+        .width(Constant.FULL_PERCENT)
         .fontSize('12vp')
         .fontColor(index == this.selectedIndex ? $r('app.color.default_db_gold') : $r('app.color.default_black_trans50'))
         .textAlign(TextAlign.Center)
     }
     .justifyContent(FlexAlign.Center)
-    .width(Constant.FULL_WIDTH_PERCENT)
-    .height(Constant.FULL_HEIGHT_PERCENT)
+    .width(Constant.FULL_PERCENT)
+    .height(Constant.FULL_PERCENT)
   }
 }

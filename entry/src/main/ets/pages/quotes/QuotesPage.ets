@@ -18,7 +18,7 @@ export struct QuotesPage {
         this.QuotesTopBar('主力豹击', 2)
       }
       .height('40vp')
-      .width(Constant.FULL_WIDTH_PERCENT)
+      .width(Constant.FULL_PERCENT)
 
       Tabs({
         index: this.nowSelectedIndex,
@@ -38,12 +38,12 @@ export struct QuotesPage {
       }
       .barMode(BarMode.Scrollable)
       .barHeight('0vp')
-      .barWidth(Constant.FULL_WIDTH_PERCENT)
+      .barWidth(Constant.FULL_PERCENT)
       .scrollable(false)
       .onChange((index: number) => {
         this.nowSelectedIndex = index;
       })
-    }.width(Constant.FULL_WIDTH_PERCENT)
+    }.width(Constant.FULL_PERCENT)
   }
 
   @Builder QuotesTopBar(title: string, index: number) {
@@ -52,7 +52,7 @@ export struct QuotesPage {
       //.animation({ duration: 1000, curve: Curve.Ease })
       .margin({ left: '12vp' })
       .backgroundColor(Color.White)
-      .height(Constant.FULL_HEIGHT_PERCENT)
+      .height(Constant.FULL_PERCENT)
       .fontColor(index == this.nowSelectedIndex ? $r('app.color.default_black') : $r('app.color.default_black_trans50'))
       .onClick(() => {
         this.nowSelectedIndex = index

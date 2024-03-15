@@ -7,7 +7,7 @@ export struct HomePage {
 
   build() {
     Web({ src: 'https://www.baidu.com', controller: this.webViewController })
-      .width(Constant.FULL_WIDTH_PERCENT)
-      .height(Constant.FULL_HEIGHT_PERCENT)
+      .width(Constant.FULL_PERCENT)
+      .height(Constant.FULL_PERCENT)
   }
 }

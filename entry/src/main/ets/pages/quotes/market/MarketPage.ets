@@ -23,8 +23,8 @@ export struct MarketPage {
               .fontSize('56fp')
               .fontColor($r('app.color.default_black'))
               .textAlign(TextAlign.Center)
-              .width(Constant.FULL_WIDTH_PERCENT)
-              .height(Constant.FULL_HEIGHT_PERCENT)
+              .width(Constant.FULL_PERCENT)
+              .height(Constant.FULL_PERCENT)
           }
         }
         .tabBar(this.MarketPageTab(item, index))
@@ -32,10 +32,10 @@ export struct MarketPage {
     }
     .barMode(BarMode.Scrollable)
     .barHeight('40vp')
-    .barWidth(Constant.FULL_WIDTH_PERCENT)
+    .barWidth(Constant.FULL_PERCENT)
     .scrollable(true)
-    .width(Constant.FULL_WIDTH_PERCENT)
-    .height(Constant.FULL_HEIGHT_PERCENT)
+    .width(Constant.FULL_PERCENT)
+    .height(Constant.FULL_PERCENT)
     .onChange((index: number) => {
       this.nowSelectedIndex = index;
     })

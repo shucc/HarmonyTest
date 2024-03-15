@@ -1,9 +1,9 @@
 export class IndexListItemBean {
   stockName: string
-  stockPrice: number
-  stockPriceRange: number
+  stockPrice: string
+  stockPriceRange: string
 
-  constructor(stockName: string, stockPrice: number, stockPriceRange: number) {
+  constructor(stockName: string, stockPrice: string, stockPriceRange: string) {
     this.stockName = stockName
     this.stockPrice = stockPrice
     this.stockPriceRange = stockPriceRange

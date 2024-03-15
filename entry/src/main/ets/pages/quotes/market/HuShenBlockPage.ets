@@ -6,7 +6,7 @@ export struct HuShenBlockPage {
     Column() {
       IndexListLayout()
     }
-    .height(Constant.FULL_HEIGHT_PERCENT)
-    .width(Constant.FULL_WIDTH_PERCENT)
+    .height(Constant.FULL_PERCENT)
+    .width(Constant.FULL_PERCENT)
   }
 }
