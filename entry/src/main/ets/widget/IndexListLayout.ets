@@ -2,6 +2,7 @@ import { IndexListItemBean } from '../model/IndexListItemBean'
 import { Constant } from '../utils/Constant'
 import { applyAlphaToColor, getColorByRange } from '../utils/ColorUtil'
 import { getPrice } from '../utils/StringUtil'
+import router from '@ohos.router';
 
 @Component
 export struct IndexListLayout {
@@ -46,7 +47,10 @@ export struct IndexListLayout {
             .borderRadius('4vp')
             .backgroundColor(applyAlphaToColor(getColorByRange(itemBean.stockPriceRange), 0.1))
             .onClick(() => {
-
+              router.pushUrl({
+                url: 'pages/StockDetailPage',
+                params: { stockDetail: itemBean }
+              })
             })
           }
           .height(Constant.FULL_PERCENT)

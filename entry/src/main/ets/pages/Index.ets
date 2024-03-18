@@ -5,10 +5,13 @@ import { HomePage } from './home/HomePage'
 import { MyPage } from './my/MyPage'
 import { QuotesPage } from './quotes/QuotesPage'
 import { TradePage } from './trade/TradePage'
+import prompt from '@ohos.prompt';
 
 @Entry
 @Component
 struct Index {
+  private EXIT_TIME_BETWEEN = 3000
+  private lastExitTime = -1
   @State selectedIndex: number = 1
 
   build() {
@@ -83,6 +86,22 @@ struct Index {
     }
     .width(Constant.FULL_PERCENT)
     .height(Constant.FULL_PERCENT)
+  }
+
+  onBackPress() {
+    let currentTime = new Date().getTime();
+    if (-1 == this.lastExitTime) {
+      this.lastExitTime = currentTime;
+      prompt.showToast({ message: '再按一次退出App' })
+      return true;
+    } else {
+      if (currentTime - this.lastExitTime > this.EXIT_TIME_BETWEEN) {
+        prompt.showToast({ message: '再按一次退出App' })
+        this.lastExitTime = currentTime;
+        return true;
+      }
+    }
+    return false;
   }
 
   @Builder TabBottom(item: TabItem, index: number) {
